@@ -1,7 +1,7 @@
 import sys,os,dropbox,json,time
 import traceback
-APP_KEY = 'v5t1lconfa03p2i'
-APP_SECRET = 'n6f5mali66l0i9y'
+APP_KEY = os.getenv('DROPBOX_APPKEY', '')
+APP_SECRET = os.getenv('DROPBOX_APPSECRET', '')
 TOKEN_FILENAME = 'token.txt'
 WATCHED_FILENAME = 'watched.json'
 client = None
